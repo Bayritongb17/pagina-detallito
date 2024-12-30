@@ -1,0 +1,172 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    animation: colorChange 10s infinite alternate; /* Animación de cambio de color de fondo */
+}
+
+/* Fondo con cambio de color */
+@keyframes colorChange {
+    0% {
+        background-color: #ff6f61; /* Color inicial */
+    }
+    25% {
+        background-color: #ffb6c1; /* Rosa suave */
+    }
+    50% {
+        background-color: #f7b2ad; /* Rosa cálido */
+    }
+    75% {
+        background-color: #ff4b42; /* Rojo suave */
+    }
+    100% {
+        background-color: #ff6f61; /* Vuelve al color inicial */
+    }
+}
+
+/* Fondo sutil con corazones */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2017/08/30/22/19/love-2692977_960_720.jpg') no-repeat center center fixed;
+    background-size: 150%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Encabezado */
+.header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.header:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Carta */
+.carta {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.carta:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-carta {
+    font-size: 2em;
+    color: #ff6f61;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilos de los botones */
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4b42;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 71, 65, 0.5);
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid #ff4b42;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.8);
+}
+
+/* Quiz */
+.quiz-sentimientos {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.quiz-sentimientos .pregunta {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.quiz-sentimientos input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.quiz-sentimientos input[type="radio"]:hover {
+    transform: scale(1.4);
+}
+
+/* Resultado del Quiz */
+#resultado4 {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Footer */
+.footer {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.footer:hover {
+    opacity: 1;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-content {
+    animation: fadeIn 1s ease-out;
+}
